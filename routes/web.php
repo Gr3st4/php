@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\productcontroller;
 
 Route::get('/', function () {
-    return view('welcome');
+return redirect()->route('product.index');
 });
+
+Route::resource('product', productcontroller::class);
